@@ -1,6 +1,12 @@
 In the project directory, navigate to backend:
 ### `cd backend`
 
+Inside this directory add .env file with following variables
+### `
+MONGODB_URI = <your mongodb uri or use this> mongodb+srv://kedar:KedarLing19@cluster69.yhq0rvs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster69
+PORT = 3069
+JWT_SECRET = kdeuanj90 < or anyother string to generate hashed passwords>
+`
 In the backend directory, run the server using:
 ### `npm start`
 
