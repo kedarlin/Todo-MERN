@@ -46,7 +46,7 @@ const Education = () => {
     }
 
     const educationTasks = tasks
-        .filter(task => task.taskType.toLowerCase() === 'education' && !task.completed)
+        .filter(task => task.taskType.toLowerCase() === 'education' && !task.taskStatus)
         .sort((a, b) => new Date(a.taskDate) - new Date(b.taskDate));
 
     return (
