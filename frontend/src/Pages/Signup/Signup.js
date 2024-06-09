@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSignup = async () => {
         console.log('signing up');
         try {
-            const response = await axios.post('http://127.0.0.1:3069/api/auth/signup', {
+            const response = await axios.post('https://todo-mern-server.vercel.app/api/auth/signup', {
                 userName,
                 email,
                 password

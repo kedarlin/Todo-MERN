@@ -48,7 +48,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3069/api/auth/signin', {
+            const response = await axios.post('https://todo-mern-server.vercel.app/api/auth/signin', {
                 email,
                 password
             });
