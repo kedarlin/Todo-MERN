@@ -65,7 +65,7 @@ const Education = () => {
                                     type='checkbox'
                                     className='education-task-check'
                                     onChange={() => handleTaskCheck(task._id, !task.taskStatus)}
-                                    checked={task.completed}
+                                    checked={task.taskStatus}
                                 />
                                 <div className='education-task-name'>{task.taskName}</div>
                                 <span>by {formatDeadline(task.deadlineTime)}</span>

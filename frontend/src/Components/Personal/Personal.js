@@ -65,7 +65,7 @@ const Personal = () => {
                                     type='checkbox'
                                     className='personal-task-check'
                                     onChange={() => handleTaskCheck(task._id, !task.taskStatus)}
-                                    checked={task.completed}
+                                    checked={task.taskStatus}
                                 />
                                 <div className='personal-task-name'>{task.taskName}</div>
                                 <span>by {formatDeadline(task.deadlineTime)}</span>
