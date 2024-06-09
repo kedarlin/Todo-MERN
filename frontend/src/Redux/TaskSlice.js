@@ -3,25 +3,25 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async (userId) => {
-    const response = await axios.get(`http://localhost:3069/api/task/${userId}`);
+    const response = await axios.get(`https://todo-mern-server.vercel.app/api/task/${userId}`);
     return response.data;
 });
 
 export const addTask = createAsyncThunk('tasks/addTask', async (taskData) => {
-    const response = await axios.post('http://localhost:3069/api/task', taskData);
+    const response = await axios.post('https://todo-mern-server.vercel.app/api/task', taskData);
     return response.data;
 });
 
 export const updateTask = createAsyncThunk('tasks/updateTask', async ({ id, taskStatus }) => {
     const userId = localStorage.getItem('userId');
     const taskId = id;
-    const response = await axios.put(`http://localhost:3069/api/task/${userId}/${taskId}`, { taskStatus });
+    const response = await axios.put(`https://todo-mern-server.vercel.app/api/task/${userId}/${taskId}`, { taskStatus });
     return response.data;
 });
 
 export const deleteTask = createAsyncThunk('tasks/deleteTask', async (taskId) => {
     const userId = localStorage.getItem('userId');
-    await axios.delete(`http://localhost:3069/api/task/${userId}/${taskId}`);
+    await axios.delete(`https://todo-mern-server.vercel.app/api/task/${userId}/${taskId}`);
     return taskId;
 });
 
